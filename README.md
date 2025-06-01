@@ -33,16 +33,16 @@ Lohix represents a unified control platform — one where you command real hardw
 
 Lohix is divided into modular components, each a standalone project with its own testing and abstraction layers.
 
-| Layer                                                      | Description                                                                                                                 |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [**Firmware**](./docs/firmware.md)                         | Embedded Rust firmware running on STM32F3, handling AT commands over UART/USB to control peripherals                        |
-| [**AT Command Specification**](./docs/device-control.md)   | Defined, extensible command format for communicating with the firmware                                                      |
-| [**CLI Application**](./docs/cli-tool.md)                  | A Rust-based terminal app to convert user-friendly commands to AT commands                                                  |
-| [**Backend Web Server**](./docs/web-server.md)             | Web API written in Rust that wraps the CLI, enabling browser-based interaction                                              |
-| [**React Web UI**](./docs/web-ui.md)                       | Modern single-page application (SPA) to control and monitor board peripherals                                               |
-| [**Desktop App (rs-gtk)**](./docs/gtk-app.md)              | A native GUI written using GTK in Rust, reusing the command abstraction                                                     |
-| [**Mobile App (Android, optional)**](./docs/mobile.md)     | A future extension using Kotlin or Flutter that communicates with the web backend or directly via USB OTG                   |
-| [**Linux Device Driver (future)**](./docs/linux-driver.md) | A learning exploration into Linux kernel development, replacing the CLI/server and allowing direct device file I/O from UIs |
+| Layer                                                        | Description                                                                                                                 |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| [**Firmware**](./docs/firmware.md)                           | Embedded Rust firmware running on STM32F3, handling AT commands over UART/USB to control peripherals                        |
+| [**Device Control Specification**](./docs/device-control.md) | Defined, extensible command format for communicating with the firmware                                                      |
+| [**CLI Application**](./docs/cli-tool.md)                    | A Rust-based terminal app to convert user-friendly commands to AT commands                                                  |
+| [**Backend Web Server**](./docs/web-server.md)               | Web API written in Rust that wraps the CLI, enabling browser-based interaction                                              |
+| [**React Web UI**](./docs/web-ui.md)                         | Modern single-page application (SPA) to control and monitor board peripherals                                               |
+| [**Desktop App (rs-gtk)**](./docs/gtk-app.md)                | A native GUI written using GTK in Rust, reusing the command abstraction                                                     |
+| [**Mobile App (Android, optional)**](./docs/mobile.md)       | A future extension using Kotlin or Flutter that communicates with the web backend or directly via USB OTG                   |
+| [**Linux Device Driver (future)**](./docs/linux-driver.md)   | A learning exploration into Linux kernel development, replacing the CLI/server and allowing direct device file I/O from UIs |
 
 ---
 
