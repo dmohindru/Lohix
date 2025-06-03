@@ -29,7 +29,7 @@ Lohix represents a unified control platform — one where you command real hardw
 
 ---
 
-## 🤩 Project Layers
+## 🤩 Project Layers Documentation
 
 Lohix is divided into modular components, each a standalone project with its own testing and abstraction layers.
 
@@ -43,6 +43,20 @@ Lohix is divided into modular components, each a standalone project with its own
 | [**Desktop App (rs-gtk)**](./docs/gtk-app.md)                | A native GUI written using GTK in Rust, reusing the command abstraction                                                     |
 | [**Mobile App (Android, optional)**](./docs/mobile.md)       | A future extension using Kotlin or Flutter that communicates with the web backend or directly via USB OTG                   |
 | [**Linux Device Driver (future)**](./docs/linux-driver.md)   | A learning exploration into Linux kernel development, replacing the CLI/server and allowing direct device file I/O from UIs |
+
+---
+
+## 🤩 Project Layers
+
+| Project                            | Description                                                                                                                 |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Firmware**                       | Embedded Rust firmware running on STM32F3, handling AT commands over UART/USB to control peripherals                        |
+| **CLI Application**                | A Rust-based terminal app to convert user-friendly commands to AT commands                                                  |
+| **Backend Web Server**             | Web API written in Rust that wraps the CLI, enabling browser-based interaction                                              |
+| **React Web UI**                   | Modern single-page application (SPA) to control and monitor board peripherals                                               |
+| **Desktop App (rs-gtk)**           | A native GUI written using GTK in Rust, reusing the command abstraction                                                     |
+| **Mobile App (Android, optional)** | A future extension using Kotlin or Flutter that communicates with the web backend or directly via USB OTG                   |
+| **Linux Device Driver (future)**   | A learning exploration into Linux kernel development, replacing the CLI/server and allowing direct device file I/O from UIs |
 
 ---
 
