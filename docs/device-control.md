@@ -201,6 +201,138 @@ Each command is a CBOR map with the following base structure:
 }
 ```
 
+## 🎛️ `led-matrix` — Display Text or Patterns
+
+### CLI Usage
+
+```bash
+lohix-cli led-matrix show "A"
+lohix-cli led-matrix pattern "[[1,0,0,0,1],[0,1,0,1,0],[0,0,1,0,0],[0,1,0,1,0],[1,0,0,0,1]]"
+lohix-cli led-matrix clear
+```
+
+### CBOR Examples
+
+#### Show Character
+
+```cbor
+{
+  "cmd": "led-matrix",
+  "action": "show",
+  "text": "A"
+}
+```
+
+#### Display Pattern
+
+```cbor
+{
+  "cmd": "led-matrix",
+  "action": "pattern",
+  "data": [
+    [1,0,0,0,1],
+    [0,1,0,1,0],
+    [0,0,1,0,0],
+    [0,1,0,1,0],
+    [1,0,0,0,1]
+  ]
+}
+```
+
+#### Clear Display
+
+```cbor
+{
+  "cmd": "led-matrix",
+  "action": "clear"
+}
+```
+
+### 🧩 Optional Enhancements
+
+`lohix-cli led-matrix scroll "Hello"` — scroll text
+
+---
+
+## 🎤 `mic` — Monitor Microphone Loudness
+
+### CLI Usage
+
+```bash
+lohix-cli mic level
+lohix-cli mic log 5000
+lohix-cli mic stop
+```
+
+### CBOR Examples
+
+#### Start Logging
+
+```cbor
+{
+  "cmd": "mic",
+  "action": "log",
+  "duration_ms": 5000
+}
+```
+
+#### Response
+
+```cbor
+{
+  "resp": "mic-log",
+  "samples": [12, 34, 21, 48, 30, 5]
+}
+```
+
+---
+
+## 🔊 `speaker` — Play Sound or Melodies
+
+### CLI Usage
+
+```bash
+lohix-cli speaker tone 440 1000
+lohix-cli speaker melody happy_birthday
+lohix-cli speaker stop
+```
+
+### CBOR Examples
+
+#### Play Tone
+
+```cbor
+{
+  "cmd": "speaker",
+  "action": "tone",
+  "freq_hz": 440,
+  "duration_ms": 1000
+}
+```
+
+#### Play Melody
+
+```cbor
+{
+  "cmd": "speaker",
+  "action": "melody",
+  "name": "happy_birthday"
+}
+```
+
+#### Stop Playback
+
+```cbor
+{
+  "cmd": "speaker",
+  "action": "stop"
+}
+```
+
+### 🧩 Optional Enhancements
+
+`lohix-cli speaker sequence '[{"freq":440,"dur":500},{"freq":880,"dur":500}]'` — tone sequence
+
 ---
 
 ## ✅ Notes
